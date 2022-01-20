@@ -1,4 +1,5 @@
 import fetch from 'unfetch';
+// const BACKEND_URL="http://binistorebackend-env-3.eba-pn96evrm.us-east-1.elasticbeanstalk.com"
 
 const checkStatus = response => {
     if (response.ok) {
