@@ -16,7 +16,7 @@ export const getAllItems = () =>
         .then(checkStatus);
 
 export const addNewItem = item =>
-    fetch("item/add", {
+    fetch("/item/add", {
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -26,15 +26,15 @@ export const addNewItem = item =>
     ).then(checkStatus)
 
 export const deleteItem = itemId =>
-    fetch(`item/delete/item/${itemId}`, {
+    fetch(`/item/delete/item/${itemId}`, {
         method: 'DELETE'
     }).then(checkStatus);
 
 export const updateAcceptItem = itemId =>
-    fetch(`item/update/${itemId}`, {
+    fetch(`/item/update/${itemId}`, {
         method: 'PATCH'
     }).then(checkStatus);
 export const updateRejectItem = itemId =>
-    fetch(`item/update/reject/${itemId}`, {
+    fetch(`/item/update/reject/${itemId}`, {
         method: 'PATCH'
     }).then(checkStatus);
